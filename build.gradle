@@ -1,0 +1,89 @@
+import groovy.json.JsonOutput
+
+plugins {
+    id 'java'
+    id 'groovy'
+}
+
+group = 'cl.villegas'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Junit
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.7.2'
+
+    // Cucumber
+    testImplementation 'io.cucumber:cucumber-java:6.10.4'
+    testImplementation 'io.cucumber:cucumber-junit:6.10.4'
+
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+
+    // Webdriver Manager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.3.3'
+
+    // FreeMarker HTML
+    implementation 'org.freemarker:freemarker:2.3.32'
+
+    // Jasper Report
+    implementation 'net.sf.jasperreports:jasperreports:6.20.6'
+
+    // Libre Pdf
+    implementation 'com.github.librepdf:openpdf:1.3.32'
+
+    // Rest Assured
+    testImplementation 'io.rest-assured:rest-assured:3.3.0'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testCompileOnly 'org.projectlombok:lombok:1.18.26'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    // TESSERACT
+    implementation 'net.sourceforge.tess4j:tess4j:5.5.0'
+
+    // Log4j
+    implementation 'log4j:log4j:1.2.17'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('generateBuildJsonFile') {
+    def projectInformation = String.format('"name":"%s", "group":"%s", "version":"%s"', project.name, project.group, project.version)
+    def javaFormat = String.format('"java": {"source":"%s","target":"%s"}', sourceCompatibility, targetCompatibility)
+    def dependencies = '"dependencies": ['
+    def json = '{' + projectInformation + ',' + javaFormat + ',' + dependencies
+    def i = 0
+
+    configurations.testRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.each { artifact ->
+        i++
+        json += JsonOutput.toJson(artifact.moduleVersion.id)
+
+        if (i < configurations.testRuntimeClasspath.resolvedConfiguration.resolvedArtifacts.size()) {
+            json += ","
+        }
+    }
+
+    json += "]}"
+    json = JsonOutput.prettyPrint(json)
+    new File(projectDir, buildscript.sourceFile.name.replace('gradle', 'json')).text = json
+}
+
+build.dependsOn generateBuildJsonFile

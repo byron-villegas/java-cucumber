@@ -1,0 +1,1334 @@
+{
+    "name": "cucumber",
+    "group": "cl.villegas",
+    "version": "1.0-SNAPSHOT",
+    "java": {
+        "source": "1.8",
+        "target": "1.8"
+    },
+    "dependencies": [
+        {
+            "group": "io.github.bonigarcia",
+            "version": "5.3.3",
+            "name": "webdrivermanager",
+            "module": {
+                "group": "io.github.bonigarcia",
+                "name": "webdrivermanager"
+            }
+        },
+        {
+            "group": "org.freemarker",
+            "version": "2.3.32",
+            "name": "freemarker",
+            "module": {
+                "group": "org.freemarker",
+                "name": "freemarker"
+            }
+        },
+        {
+            "group": "net.sf.jasperreports",
+            "version": "6.20.6",
+            "name": "jasperreports",
+            "module": {
+                "group": "net.sf.jasperreports",
+                "name": "jasperreports"
+            }
+        },
+        {
+            "group": "com.github.librepdf",
+            "version": "1.3.32",
+            "name": "openpdf",
+            "module": {
+                "group": "com.github.librepdf",
+                "name": "openpdf"
+            }
+        },
+        {
+            "group": "com.google.code.gson",
+            "version": "2.10.1",
+            "name": "gson",
+            "module": {
+                "group": "com.google.code.gson",
+                "name": "gson"
+            }
+        },
+        {
+            "group": "net.sourceforge.tess4j",
+            "version": "5.5.0",
+            "name": "tess4j",
+            "module": {
+                "group": "net.sourceforge.tess4j",
+                "name": "tess4j"
+            }
+        },
+        {
+            "group": "log4j",
+            "version": "1.2.17",
+            "name": "log4j",
+            "module": {
+                "group": "log4j",
+                "name": "log4j"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.7.2",
+            "name": "junit-platform-engine",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-engine"
+            }
+        },
+        {
+            "group": "org.junit.platform",
+            "version": "1.7.2",
+            "name": "junit-platform-commons",
+            "module": {
+                "group": "org.junit.platform",
+                "name": "junit-platform-commons"
+            }
+        },
+        {
+            "group": "org.junit.vintage",
+            "version": "5.7.2",
+            "name": "junit-vintage-engine",
+            "module": {
+                "group": "org.junit.vintage",
+                "name": "junit-vintage-engine"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-java",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-java"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-junit",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-junit"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-java",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-java"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "3.3.0",
+            "name": "rest-assured",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "rest-assured"
+            }
+        },
+        {
+            "group": "com.github.docker-java",
+            "version": "3.3.0",
+            "name": "docker-java-transport-httpclient5",
+            "module": {
+                "group": "com.github.docker-java",
+                "name": "docker-java-transport-httpclient5"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents.client5",
+            "version": "5.2.1",
+            "name": "httpclient5",
+            "module": {
+                "group": "org.apache.httpcomponents.client5",
+                "name": "httpclient5"
+            }
+        },
+        {
+            "group": "com.github.docker-java",
+            "version": "3.3.0",
+            "name": "docker-java",
+            "module": {
+                "group": "com.github.docker-java",
+                "name": "docker-java"
+            }
+        },
+        {
+            "group": "com.github.docker-java",
+            "version": "3.3.0",
+            "name": "docker-java-core",
+            "module": {
+                "group": "com.github.docker-java",
+                "name": "docker-java-core"
+            }
+        },
+        {
+            "group": "org.slf4j",
+            "version": "1.7.30",
+            "name": "jcl-over-slf4j",
+            "module": {
+                "group": "org.slf4j",
+                "name": "jcl-over-slf4j"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-chrome-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-chrome-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-devtools-v113",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-devtools-v113"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-devtools-v114",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-devtools-v114"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-devtools-v115",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-devtools-v115"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-firefox-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-firefox-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-devtools-v85",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-devtools-v85"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-edge-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-edge-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-ie-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-ie-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-safari-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-safari-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-support",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-support"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-chromium-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-chromium-driver"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-remote-driver",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-remote-driver"
+            }
+        },
+        {
+            "group": "org.asynchttpclient",
+            "version": "2.12.3",
+            "name": "async-http-client",
+            "module": {
+                "group": "org.asynchttpclient",
+                "name": "async-http-client"
+            }
+        },
+        {
+            "group": "com.github.docker-java",
+            "version": "3.3.0",
+            "name": "docker-java-api",
+            "module": {
+                "group": "com.github.docker-java",
+                "name": "docker-java-api"
+            }
+        },
+        {
+            "group": "org.asynchttpclient",
+            "version": "2.12.3",
+            "name": "async-http-client-netty-utils",
+            "module": {
+                "group": "org.asynchttpclient",
+                "name": "async-http-client-netty-utils"
+            }
+        },
+        {
+            "group": "org.slf4j",
+            "version": "2.0.7",
+            "name": "slf4j-api",
+            "module": {
+                "group": "org.slf4j",
+                "name": "slf4j-api"
+            }
+        },
+        {
+            "group": "org.brotli",
+            "version": "0.1.2",
+            "name": "dec",
+            "module": {
+                "group": "org.brotli",
+                "name": "dec"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "3.3.0",
+            "name": "xml-path",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "xml-path"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "3.3.0",
+            "name": "json-path",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "json-path"
+            }
+        },
+        {
+            "group": "io.rest-assured",
+            "version": "3.3.0",
+            "name": "rest-assured-common",
+            "module": {
+                "group": "io.rest-assured",
+                "name": "rest-assured-common"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "3.12.0",
+            "name": "commons-lang3",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-lang3"
+            }
+        },
+        {
+            "group": "commons-digester",
+            "version": "2.1",
+            "name": "commons-digester",
+            "module": {
+                "group": "commons-digester",
+                "name": "commons-digester"
+            }
+        },
+        {
+            "group": "commons-beanutils",
+            "version": "1.9.4",
+            "name": "commons-beanutils",
+            "module": {
+                "group": "commons-beanutils",
+                "name": "commons-beanutils"
+            }
+        },
+        {
+            "group": "org.apache.pdfbox",
+            "version": "2.0.27",
+            "name": "pdfbox-tools",
+            "module": {
+                "group": "org.apache.pdfbox",
+                "name": "pdfbox-tools"
+            }
+        },
+        {
+            "group": "org.apache.pdfbox",
+            "version": "2.0.27",
+            "name": "pdfbox-debugger",
+            "module": {
+                "group": "org.apache.pdfbox",
+                "name": "pdfbox-debugger"
+            }
+        },
+        {
+            "group": "org.apache.pdfbox",
+            "version": "2.0.27",
+            "name": "pdfbox",
+            "module": {
+                "group": "org.apache.pdfbox",
+                "name": "pdfbox"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.5.3",
+            "name": "httpmime",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpmime"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.5.3",
+            "name": "httpclient",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpclient"
+            }
+        },
+        {
+            "group": "org.apache.pdfbox",
+            "version": "2.0.27",
+            "name": "fontbox",
+            "module": {
+                "group": "org.apache.pdfbox",
+                "name": "fontbox"
+            }
+        },
+        {
+            "group": "commons-logging",
+            "version": "1.2",
+            "name": "commons-logging",
+            "module": {
+                "group": "commons-logging",
+                "name": "commons-logging"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "4.2",
+            "name": "commons-collections4",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-collections4"
+            }
+        },
+        {
+            "group": "org.jfree",
+            "version": "1.0.19",
+            "name": "jfreechart",
+            "module": {
+                "group": "org.jfree",
+                "name": "jfreechart"
+            }
+        },
+        {
+            "group": "org.jfree",
+            "version": "1.0.23",
+            "name": "jcommon",
+            "module": {
+                "group": "org.jfree",
+                "name": "jcommon"
+            }
+        },
+        {
+            "group": "org.eclipse.jdt",
+            "version": "3.21.0",
+            "name": "ecj",
+            "module": {
+                "group": "org.eclipse.jdt",
+                "name": "ecj"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.14.1",
+            "name": "jackson-annotations",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-annotations"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.dataformat",
+            "version": "2.14.1",
+            "name": "jackson-dataformat-xml",
+            "module": {
+                "group": "com.fasterxml.jackson.dataformat",
+                "name": "jackson-dataformat-xml"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.14.1",
+            "name": "jackson-databind",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-databind"
+            }
+        },
+        {
+            "group": "com.fasterxml.jackson.core",
+            "version": "2.14.1",
+            "name": "jackson-core",
+            "module": {
+                "group": "com.fasterxml.jackson.core",
+                "name": "jackson-core"
+            }
+        },
+        {
+            "group": "net.sourceforge.lept4j",
+            "version": "1.17.0",
+            "name": "lept4j",
+            "module": {
+                "group": "net.sourceforge.lept4j",
+                "name": "lept4j"
+            }
+        },
+        {
+            "group": "net.java.dev.jna",
+            "version": "5.12.1",
+            "name": "jna",
+            "module": {
+                "group": "net.java.dev.jna",
+                "name": "jna"
+            }
+        },
+        {
+            "group": "com.github.jai-imageio",
+            "version": "1.4.0",
+            "name": "jai-imageio-core",
+            "module": {
+                "group": "com.github.jai-imageio",
+                "name": "jai-imageio-core"
+            }
+        },
+        {
+            "group": "org.apache.pdfbox",
+            "version": "3.0.4",
+            "name": "jbig2-imageio",
+            "module": {
+                "group": "org.apache.pdfbox",
+                "name": "jbig2-imageio"
+            }
+        },
+        {
+            "group": "commons-io",
+            "version": "2.11.0",
+            "name": "commons-io",
+            "module": {
+                "group": "commons-io",
+                "name": "commons-io"
+            }
+        },
+        {
+            "group": "org.jboss",
+            "version": "3.2.17.Final",
+            "name": "jboss-vfs",
+            "module": {
+                "group": "org.jboss",
+                "name": "jboss-vfs"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-core",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-core"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "10.3.0",
+            "name": "cucumber-expressions",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-expressions"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "3.5.0",
+            "name": "datatable",
+            "module": {
+                "group": "io.cucumber",
+                "name": "datatable"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-gherkin-messages",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-gherkin-messages"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-gherkin",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-gherkin"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "cucumber-plugin",
+            "module": {
+                "group": "io.cucumber",
+                "name": "cucumber-plugin"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "6.10.4",
+            "name": "docstring",
+            "module": {
+                "group": "io.cucumber",
+                "name": "docstring"
+            }
+        },
+        {
+            "group": "org.apiguardian",
+            "version": "1.1.1",
+            "name": "apiguardian-api",
+            "module": {
+                "group": "org.apiguardian",
+                "name": "apiguardian-api"
+            }
+        },
+        {
+            "group": "junit",
+            "version": "4.13.2",
+            "name": "junit",
+            "module": {
+                "group": "junit",
+                "name": "junit"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-manager",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-manager"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-http",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-http"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-json",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-json"
+            }
+        },
+        {
+            "group": "org.seleniumhq.selenium",
+            "version": "4.11.0",
+            "name": "selenium-api",
+            "module": {
+                "group": "org.seleniumhq.selenium",
+                "name": "selenium-api"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "2.4.15",
+            "name": "groovy-xml",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-xml"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "2.4.15",
+            "name": "groovy-json",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy-json"
+            }
+        },
+        {
+            "group": "org.codehaus.groovy",
+            "version": "2.4.15",
+            "name": "groovy",
+            "module": {
+                "group": "org.codehaus.groovy",
+                "name": "groovy"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "1.3",
+            "name": "hamcrest-library",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-library"
+            }
+        },
+        {
+            "group": "org.hamcrest",
+            "version": "1.3",
+            "name": "hamcrest-core",
+            "module": {
+                "group": "org.hamcrest",
+                "name": "hamcrest-core"
+            }
+        },
+        {
+            "group": "org.ccil.cowan.tagsoup",
+            "version": "1.2.1",
+            "name": "tagsoup",
+            "module": {
+                "group": "org.ccil.cowan.tagsoup",
+                "name": "tagsoup"
+            }
+        },
+        {
+            "group": "com.github.docker-java",
+            "version": "3.3.0",
+            "name": "docker-java-transport",
+            "module": {
+                "group": "com.github.docker-java",
+                "name": "docker-java-transport"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents.core5",
+            "version": "5.2",
+            "name": "httpcore5-h2",
+            "module": {
+                "group": "org.apache.httpcomponents.core5",
+                "name": "httpcore5-h2"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents.core5",
+            "version": "5.2",
+            "name": "httpcore5",
+            "module": {
+                "group": "org.apache.httpcomponents.core5",
+                "name": "httpcore5"
+            }
+        },
+        {
+            "group": "commons-collections",
+            "version": "3.2.2",
+            "name": "commons-collections",
+            "module": {
+                "group": "commons-collections",
+                "name": "commons-collections"
+            }
+        },
+        {
+            "group": "com.fasterxml.woodstox",
+            "version": "6.4.0",
+            "name": "woodstox-core",
+            "module": {
+                "group": "com.fasterxml.woodstox",
+                "name": "woodstox-core"
+            }
+        },
+        {
+            "group": "org.codehaus.woodstox",
+            "version": "4.2.1",
+            "name": "stax2-api",
+            "module": {
+                "group": "org.codehaus.woodstox",
+                "name": "stax2-api"
+            }
+        },
+        {
+            "group": "org.jboss.logging",
+            "version": "3.1.4.GA",
+            "name": "jboss-logging",
+            "module": {
+                "group": "org.jboss.logging",
+                "name": "jboss-logging"
+            }
+        },
+        {
+            "group": "org.opentest4j",
+            "version": "1.2.0",
+            "name": "opentest4j",
+            "module": {
+                "group": "org.opentest4j",
+                "name": "opentest4j"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "13.0.0",
+            "name": "html-formatter",
+            "module": {
+                "group": "io.cucumber",
+                "name": "html-formatter"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "4.0.0",
+            "name": "create-meta",
+            "module": {
+                "group": "io.cucumber",
+                "name": "create-meta"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "15.0.0",
+            "name": "messages",
+            "module": {
+                "group": "io.cucumber",
+                "name": "messages"
+            }
+        },
+        {
+            "group": "io.cucumber",
+            "version": "3.0.1",
+            "name": "tag-expressions",
+            "module": {
+                "group": "io.cucumber",
+                "name": "tag-expressions"
+            }
+        },
+        {
+            "group": "com.google.auto.service",
+            "version": "1.0.1",
+            "name": "auto-service-annotations",
+            "module": {
+                "group": "com.google.auto.service",
+                "name": "auto-service-annotations"
+            }
+        },
+        {
+            "group": "com.google.guava",
+            "version": "31.1-jre",
+            "name": "guava",
+            "module": {
+                "group": "com.google.guava",
+                "name": "guava"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.60.Final",
+            "name": "netty-handler-proxy",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-handler-proxy"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-codec-http",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-codec-http"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-native-epoll",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-native-epoll"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-native-epoll",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-native-epoll"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-classes-epoll",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-classes-epoll"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-native-kqueue",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-native-kqueue"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-native-kqueue",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-native-kqueue"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-classes-kqueue",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-classes-kqueue"
+            }
+        },
+        {
+            "group": "com.typesafe.netty",
+            "version": "2.0.4",
+            "name": "netty-reactive-streams",
+            "module": {
+                "group": "com.typesafe.netty",
+                "name": "netty-reactive-streams"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-handler",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-handler"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport-native-unix-common",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport-native-unix-common"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.60.Final",
+            "name": "netty-codec-socks",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-codec-socks"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-codec",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-codec"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-transport",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-transport"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-buffer",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-buffer"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-resolver",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-resolver"
+            }
+        },
+        {
+            "group": "io.netty",
+            "version": "4.1.92.Final",
+            "name": "netty-common",
+            "module": {
+                "group": "io.netty",
+                "name": "netty-common"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-exporter-logging",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-exporter-logging"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-sdk-extension-autoconfigure",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-extension-autoconfigure"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-sdk-extension-autoconfigure-spi",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-extension-autoconfigure-spi"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-sdk",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-sdk-trace",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-trace"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-sdk-metrics",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-metrics"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-sdk-logs",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-logs"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-sdk-common",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-sdk-common"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-semconv",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-semconv"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-extension-incubator",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-extension-incubator"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-api-logs",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-api-logs"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0-alpha",
+            "name": "opentelemetry-api-events",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-api-events"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-api",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-api"
+            }
+        },
+        {
+            "group": "io.opentelemetry",
+            "version": "1.26.0",
+            "name": "opentelemetry-context",
+            "module": {
+                "group": "io.opentelemetry",
+                "name": "opentelemetry-context"
+            }
+        },
+        {
+            "group": "net.bytebuddy",
+            "version": "1.14.4",
+            "name": "byte-buddy",
+            "module": {
+                "group": "net.bytebuddy",
+                "name": "byte-buddy"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "1.3",
+            "name": "commons-exec",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-exec"
+            }
+        },
+        {
+            "group": "org.apache.httpcomponents",
+            "version": "4.4.6",
+            "name": "httpcore",
+            "module": {
+                "group": "org.apache.httpcomponents",
+                "name": "httpcore"
+            }
+        },
+        {
+            "group": "commons-codec",
+            "version": "1.9",
+            "name": "commons-codec",
+            "module": {
+                "group": "commons-codec",
+                "name": "commons-codec"
+            }
+        },
+        {
+            "group": "javax.xml.bind",
+            "version": "2.2.12",
+            "name": "jaxb-api",
+            "module": {
+                "group": "javax.xml.bind",
+                "name": "jaxb-api"
+            }
+        },
+        {
+            "group": "com.sun.xml.bind",
+            "version": "2.2.10",
+            "name": "jaxb-osgi",
+            "module": {
+                "group": "com.sun.xml.bind",
+                "name": "jaxb-osgi"
+            }
+        },
+        {
+            "group": "org.apache.sling",
+            "version": "0.1.0",
+            "name": "org.apache.sling.javax.activation",
+            "module": {
+                "group": "org.apache.sling",
+                "name": "org.apache.sling.javax.activation"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "1.21",
+            "name": "commons-compress",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-compress"
+            }
+        },
+        {
+            "group": "org.bouncycastle",
+            "version": "1.64",
+            "name": "bcpkix-jdk15on",
+            "module": {
+                "group": "org.bouncycastle",
+                "name": "bcpkix-jdk15on"
+            }
+        },
+        {
+            "group": "com.google.guava",
+            "version": "1.0.1",
+            "name": "failureaccess",
+            "module": {
+                "group": "com.google.guava",
+                "name": "failureaccess"
+            }
+        },
+        {
+            "group": "com.google.guava",
+            "version": "9999.0-empty-to-avoid-conflict-with-guava",
+            "name": "listenablefuture",
+            "module": {
+                "group": "com.google.guava",
+                "name": "listenablefuture"
+            }
+        },
+        {
+            "group": "com.google.code.findbugs",
+            "version": "3.0.2",
+            "name": "jsr305",
+            "module": {
+                "group": "com.google.code.findbugs",
+                "name": "jsr305"
+            }
+        },
+        {
+            "group": "org.checkerframework",
+            "version": "3.12.0",
+            "name": "checker-qual",
+            "module": {
+                "group": "org.checkerframework",
+                "name": "checker-qual"
+            }
+        },
+        {
+            "group": "com.google.errorprone",
+            "version": "2.11.0",
+            "name": "error_prone_annotations",
+            "module": {
+                "group": "com.google.errorprone",
+                "name": "error_prone_annotations"
+            }
+        },
+        {
+            "group": "com.google.j2objc",
+            "version": "1.3",
+            "name": "j2objc-annotations",
+            "module": {
+                "group": "com.google.j2objc",
+                "name": "j2objc-annotations"
+            }
+        },
+        {
+            "group": "dev.failsafe",
+            "version": "3.3.1",
+            "name": "failsafe",
+            "module": {
+                "group": "dev.failsafe",
+                "name": "failsafe"
+            }
+        },
+        {
+            "group": "org.reactivestreams",
+            "version": "1.0.3",
+            "name": "reactive-streams",
+            "module": {
+                "group": "org.reactivestreams",
+                "name": "reactive-streams"
+            }
+        },
+        {
+            "group": "com.sun.activation",
+            "version": "1.2.2",
+            "name": "jakarta.activation",
+            "module": {
+                "group": "com.sun.activation",
+                "name": "jakarta.activation"
+            }
+        },
+        {
+            "group": "javax.activation",
+            "version": "1.1.1",
+            "name": "activation",
+            "module": {
+                "group": "javax.activation",
+                "name": "activation"
+            }
+        },
+        {
+            "group": "org.bouncycastle",
+            "version": "1.64",
+            "name": "bcprov-jdk15on",
+            "module": {
+                "group": "org.bouncycastle",
+                "name": "bcprov-jdk15on"
+            }
+        }
+    ]
+}
