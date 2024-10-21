@@ -22,9 +22,9 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build --stacktrace
+      run: ./gradlew build
   acceptance-test:
-    needs: [build]
+    needs: [ build ]
     runs-on: ubuntu-latest
     permissions:
       contents: write
