@@ -321,6 +321,7 @@ public class ReportUtil {
             }
 
         } catch (JRException | IOException ex) {
+            ex.printStackTrace();
             throw new RuntimeException("Error al generar reporte: " + ex.getMessage());
         }
     }
