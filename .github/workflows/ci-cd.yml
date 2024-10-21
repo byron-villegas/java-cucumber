@@ -45,16 +45,16 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: cucumber
-        path: /build/cucumber
+        path: build/cucumber/
     - uses: actions/upload-artifact@v4
       with:
         name: reports
-        path: /build/reports
+        path: build/reports/
     - uses: actions/upload-artifact@v4
       with:
         name: test
-        path: /build/reports/tests/test
+        path: build/reports/tests/test
     - uses: actions/upload-artifact@v4
       with:
         name: evidencias
-        path: /evidencias
+        path: evidencias/
