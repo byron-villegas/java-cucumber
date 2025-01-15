@@ -1,6 +1,11 @@
 package util;
 
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FileUtil {
 
@@ -30,6 +35,20 @@ public class FileUtil {
 
         if (!diskDirFile.exists()) {
             diskDirFile.mkdirs();
+        }
+    }
+    
+    public static String getFileContent(String filePath) {
+        try {
+            Path path = Paths.get(filePath);
+
+            Stream<String> lines = Files.lines(path);
+            String data = lines.collect(Collectors.joining("\n"));
+            lines.close();
+
+            return data.trim();
+        } catch (Exception ex) {
+            return "";
         }
     }
 }

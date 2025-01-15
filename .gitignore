@@ -48,6 +48,10 @@ webdrivers/*
 imagenes
 evidencias
 discos
+movies
+
+# Archivos
+movies.json
 
 # Temp
 /temp
