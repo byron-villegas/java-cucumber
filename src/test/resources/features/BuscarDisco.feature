@@ -1,8 +1,7 @@
 Feature: Buscar Disco
-  @ignore
   @Web
   Scenario: Buscar Disco Por SKU
-    Given Un sku "8719262018907"
+    Given Un sku "843563125694"
     And Cerramos modal aceptar cookies
     And Lo buscamos mediante el sku
     When Seleccionamos el primer resultado
@@ -17,10 +16,10 @@ Feature: Buscar Disco
     And Abrimos la imagen
     And Obtenemos las imagenes
     Then Generamos el json de salida
-  @ignore
+
   @Web
   Scenario: Buscar Disco Por Url y SKU
-    Given Una Url "https://www.discogs.com/es/release/30586288-Laufey-Typical-Of-Me" un sku "5056167179429"
+    Given Una Url "https://www.discogs.com/release/31156373-Loren-Allred-No-Promises-To-Keep" un sku "4547366670431"
     And Cerramos modal aceptar cookies
     And Obtenemos el nombre del artista
     And Obtenemos el nombre del album

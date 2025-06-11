@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import context.WebDriverContext;
+import enums.StepStatusEnum;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,9 +13,12 @@ import model.Product;
 import model.Track;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import util.FileUtil;
 import util.ImageUtil;
+import util.ReportUtil;
 import util.WebElementUtil;
 
 import java.io.File;
@@ -66,6 +70,8 @@ public class BuscarDiscoSteps {
         WebDriverContext
                 .getDriver()
                 .get(url);
+
+        ReportUtil.addStep("Entrar en Pagina Google", StepStatusEnum.PASSED, "Visualizamos la pagina de google con la barra de busqueda");
     }
 
     @And("Cerramos modal aceptar cookies")
@@ -87,9 +93,11 @@ public class BuscarDiscoSteps {
     public void loBuscamosMedianteElSku() throws InterruptedException {
         logger.info("SKU a buscar: " + sku);
 
-        WebElement searchInput = WebDriverContext
-                .getDriver()
-                .findElement(By.name("q"));
+        WebElement shadowHost = WebDriverContext.getDriver().findElement(By.id("__header_root_3013"));
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) WebDriverContext.getDriver();
+        SearchContext shadowContext = (SearchContext) javascriptExecutor.executeScript("return arguments[0].shadowRoot", shadowHost);
+
+        WebElement searchInput = shadowContext.findElement(By.cssSelector("input[name='q']"));
 
         WebElementUtil.highlightElement(searchInput, 2000);
 
@@ -100,9 +108,11 @@ public class BuscarDiscoSteps {
 
     @When("Seleccionamos el primer resultado")
     public void seleccionamosElPrimerResultado() throws InterruptedException {
+        System.out.println("Hola");
+
         WebElement primerResultado = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("html/body/div[2]/div[1]/div/header/div/form/div/div[2]/ul/li[1]/a/div"));
+                .findElement(By.xpath("/html/body/div[1]/div[1]//div/div/header/div/form/div/div[2]/ul/li[1]"));
 
         WebElementUtil.highlightElement(primerResultado, 2000);
 
@@ -117,9 +127,10 @@ public class BuscarDiscoSteps {
     public void obtenemosElNombreDelArtista() throws InterruptedException {
         WebElement nombreDelArtista = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("//*[@id='page']/div[1]/div[2]/div/h1"));
+                .findElement(By.xpath("//*[@id='page']/div/div[1]/div/h1"));
 
         WebElementUtil.highlightElement(nombreDelArtista, 2000);
+        ReportUtil.addStep("Obtener Nombre Artista", StepStatusEnum.PASSED, "Obtenemos el nombre del artista");
 
         nombreArtista = nombreDelArtista
                 .getText()
@@ -135,7 +146,7 @@ public class BuscarDiscoSteps {
     public void obtenemosElNombreDelAlbum() throws InterruptedException {
         WebElement nombreDelDisco = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("//*[@id='page']/div[1]/div[2]/div/h1"));
+                .findElement(By.xpath("//*[@id='page']/div/div[1]/div/h1"));
 
         WebElementUtil.highlightElement(nombreDelDisco, 2000);
 
@@ -154,7 +165,7 @@ public class BuscarDiscoSteps {
         try {
             WebElement editorDelDiscoTitulo = WebDriverContext
                     .getDriver()
-                    .findElement(By.xpath("(//*/th[contains(text(), 'Label')])[1]"));
+                    .findElement(By.xpath("(//*/h2[contains(text(), 'Label')])[1]"));
 
             WebElement editorDelDisco = editorDelDiscoTitulo.findElement(By.xpath(".//following::td"));
 
@@ -178,7 +189,7 @@ public class BuscarDiscoSteps {
         try {
             WebElement formatoDelDiscoTitulo = WebDriverContext
                     .getDriver()
-                    .findElement(By.xpath("(//*/th[contains(text(), 'Format')])[1]"));
+                    .findElement(By.xpath("(//*/h2[contains(text(), 'Format')])[1]"));
 
             WebElement formatoDelDisco = formatoDelDiscoTitulo.findElement(By.xpath(".//following::td"));
 
@@ -209,7 +220,7 @@ public class BuscarDiscoSteps {
         try {
             WebElement paisDelDiscoTitulo = WebDriverContext
                     .getDriver()
-                    .findElement(By.xpath("(//*/th[contains(text(), 'Country')])[1]"));
+                    .findElement(By.xpath("(//*/h2[contains(text(), 'Country')])[1]"));
 
             WebElement paisDelDisco = paisDelDiscoTitulo.findElement(By.xpath(".//following::td"));
 
@@ -239,7 +250,7 @@ public class BuscarDiscoSteps {
         try {
             WebElement anoDelDiscoTitulo = WebDriverContext
                     .getDriver()
-                    .findElement(By.xpath("(//*/th[contains(text(), '" + tituloXPath + "')])[1]"));
+                    .findElement(By.xpath("(//*/h2[contains(text(), '" + tituloXPath + "')])[1]"));
 
             WebElement anoDelDisco = anoDelDiscoTitulo.findElement(By.xpath(".//following::td"));
 
@@ -263,7 +274,7 @@ public class BuscarDiscoSteps {
     public void obtenemosLosGeneros() throws InterruptedException {
         WebElement generosDelDiscoTitulo = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("(//*/th[contains(text(), 'Genre')])[1]"));
+                .findElement(By.xpath("(//*/h2[contains(text(), 'Genre')])[1]"));
 
         WebElement generosDelDisco = generosDelDiscoTitulo.findElement(By.xpath(".//following::td"));
 
@@ -291,7 +302,7 @@ public class BuscarDiscoSteps {
 
         WebElement tablaListadoCanciones = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("*//div[3]/section/div/table/tbody"));
+                .findElement(By.xpath("*//div[2]/section/div/table/tbody"));
 
         WebElementUtil.highlightElement(tablaListadoCanciones, 2000);
 
@@ -338,7 +349,7 @@ public class BuscarDiscoSteps {
     public void abrimosLaImagen() throws InterruptedException {
         WebElement imagenSeleccionada = WebDriverContext
                 .getDriver()
-                .findElement(By.xpath("//*[@id='page']/div[1]/div[2]/div/div[1]/div/a"));
+                .findElement(By.xpath("//*/div[1]/div[1]/div/div[1]/div/a"));
 
         WebElementUtil.highlightElement(imagenSeleccionada, 2000);
 
@@ -366,7 +377,7 @@ public class BuscarDiscoSteps {
         try {
             List<WebElement> imagenesADescargar = WebDriverContext
                     .getDriver()
-                    .findElements(By.xpath("//*[@id='page']/div[3]/ul/li"));
+                    .findElements(By.xpath("//*[@id='page']/div[2]/ul/li"));
 
             for (int i = 0; i < imagenesADescargar.size(); i++) {
                 WebElement imagenAClickear = imagenesADescargar
@@ -417,6 +428,8 @@ public class BuscarDiscoSteps {
                 .categories(generos)
                 .trackList(trackList)
                 .favorite(false)
+                .type(tipo.toUpperCase())
+                .enabled(true)
                 .build();
 
         String json = gson.toJson(product);
@@ -432,7 +445,7 @@ public class BuscarDiscoSteps {
         try {
             WebDriverContext
                     .getDriver()
-                    .findElement(By.xpath("(//*/th[contains(string(), 'Year:')])[1]"));
+                    .findElement(By.xpath("(//*/h2[contains(string(), 'Year:')])[1]"));
 
             return true;
         } catch (Exception ex) {

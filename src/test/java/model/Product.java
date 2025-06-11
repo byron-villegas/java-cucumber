@@ -23,4 +23,6 @@ public class Product {
     private List<String> categories;
     private List<Track> trackList;
     private boolean favorite;
+    private String type;
+    private boolean enabled;
 }
