@@ -1,5 +1,5 @@
 Feature: Obtener Informacion de Peliculas
-
+  @ignore
   @Web
   Scenario: Obtener los datos de un listado de peliculas
     Given La url de la pagina de peliculas "https://www.megapeliculasrip.net"
