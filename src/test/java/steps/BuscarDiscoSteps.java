@@ -404,7 +404,7 @@ public class BuscarDiscoSteps {
 
                 ImageUtil.downloadImage(imagenUrl, diskDir + numeroImagen + extension);
 
-                imagenes.add("assets/images/products/" + tipo.toLowerCase() + "/" + sku + "/" + numeroImagen + extension);
+                imagenes.add("/" + numeroImagen + extension);
 
                 Thread.sleep(2000);
             }
