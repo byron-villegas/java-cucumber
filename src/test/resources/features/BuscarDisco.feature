@@ -21,7 +21,7 @@ Feature: Buscar Disco
   @ignore
   @Web
   Scenario: Buscar Disco Por Url y SKU
-    Given Una Url "https://www.discogs.com/release/14064759-Morrissey-The-Best-Of" un sku "0603497852475"
+    Given Una Url "https://www.discogs.com/release/10351424-Various-Devil-May-Cry-4-Original-Soundtrack" un sku "4976219025034"
     And Cerramos modal aceptar cookies
     And Obtenemos el nombre del artista
     And Obtenemos el nombre del album
