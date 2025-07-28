@@ -17,6 +17,8 @@ public class WebDriverContext {
     public static String browserName;
 
     public static void initWebDriver() {
+        System.setProperty("wdm.edgeDriverUrl", "https://msedgedriver.microsoft.com/"); // Fix for EdgeDriver download issue
+
         if(webDriver == null) {
             webDriver = generateWebDriverByBrowser();
         }

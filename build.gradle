@@ -33,7 +33,7 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
 
     // Webdriver Manager
-    implementation 'io.github.bonigarcia:webdrivermanager:5.3.3'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.3'
 
     // FreeMarker HTML
     implementation 'org.freemarker:freemarker:2.3.32'

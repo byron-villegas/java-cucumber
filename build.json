@@ -9,7 +9,7 @@
     "dependencies": [
         {
             "group": "io.github.bonigarcia",
-            "version": "5.3.3",
+            "version": "5.9.3",
             "name": "webdrivermanager",
             "module": {
                 "group": "io.github.bonigarcia",
@@ -45,7 +45,7 @@
         },
         {
             "group": "com.google.code.gson",
-            "version": "2.10.1",
+            "version": "2.12.1",
             "name": "gson",
             "module": {
                 "group": "com.google.code.gson",
@@ -135,7 +135,7 @@
         },
         {
             "group": "com.github.docker-java",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "name": "docker-java-transport-httpclient5",
             "module": {
                 "group": "com.github.docker-java",
@@ -153,7 +153,7 @@
         },
         {
             "group": "com.github.docker-java",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "name": "docker-java",
             "module": {
                 "group": "com.github.docker-java",
@@ -162,7 +162,7 @@
         },
         {
             "group": "com.github.docker-java",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "name": "docker-java-core",
             "module": {
                 "group": "com.github.docker-java",
@@ -297,7 +297,7 @@
         },
         {
             "group": "com.github.docker-java",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "name": "docker-java-api",
             "module": {
                 "group": "com.github.docker-java",
@@ -315,7 +315,7 @@
         },
         {
             "group": "org.slf4j",
-            "version": "2.0.7",
+            "version": "2.0.16",
             "name": "slf4j-api",
             "module": {
                 "group": "org.slf4j",
@@ -329,6 +329,15 @@
             "module": {
                 "group": "org.brotli",
                 "name": "dec"
+            }
+        },
+        {
+            "group": "org.apache.commons",
+            "version": "1.27.1",
+            "name": "commons-compress",
+            "module": {
+                "group": "org.apache.commons",
+                "name": "commons-compress"
             }
         },
         {
@@ -360,7 +369,7 @@
         },
         {
             "group": "org.apache.commons",
-            "version": "3.12.0",
+            "version": "3.17.0",
             "name": "commons-lang3",
             "module": {
                 "group": "org.apache.commons",
@@ -531,7 +540,7 @@
         },
         {
             "group": "net.java.dev.jna",
-            "version": "5.12.1",
+            "version": "5.13.0",
             "name": "jna",
             "module": {
                 "group": "net.java.dev.jna",
@@ -558,7 +567,7 @@
         },
         {
             "group": "commons-io",
-            "version": "2.11.0",
+            "version": "2.16.1",
             "name": "commons-io",
             "module": {
                 "group": "commons-io",
@@ -746,12 +755,39 @@
             }
         },
         {
+            "group": "com.google.guava",
+            "version": "31.1-jre",
+            "name": "guava",
+            "module": {
+                "group": "com.google.guava",
+                "name": "guava"
+            }
+        },
+        {
+            "group": "com.google.errorprone",
+            "version": "2.36.0",
+            "name": "error_prone_annotations",
+            "module": {
+                "group": "com.google.errorprone",
+                "name": "error_prone_annotations"
+            }
+        },
+        {
             "group": "com.github.docker-java",
-            "version": "3.3.0",
+            "version": "3.4.1",
             "name": "docker-java-transport",
             "module": {
                 "group": "com.github.docker-java",
                 "name": "docker-java-transport"
+            }
+        },
+        {
+            "group": "commons-codec",
+            "version": "1.17.1",
+            "name": "commons-codec",
+            "module": {
+                "group": "commons-codec",
+                "name": "commons-codec"
             }
         },
         {
@@ -860,15 +896,6 @@
             "module": {
                 "group": "com.google.auto.service",
                 "name": "auto-service-annotations"
-            }
-        },
-        {
-            "group": "com.google.guava",
-            "version": "31.1-jre",
-            "name": "guava",
-            "module": {
-                "group": "com.google.guava",
-                "name": "guava"
             }
         },
         {
@@ -1178,15 +1205,6 @@
             }
         },
         {
-            "group": "commons-codec",
-            "version": "1.9",
-            "name": "commons-codec",
-            "module": {
-                "group": "commons-codec",
-                "name": "commons-codec"
-            }
-        },
-        {
             "group": "javax.xml.bind",
             "version": "2.2.12",
             "name": "jaxb-api",
@@ -1211,24 +1229,6 @@
             "module": {
                 "group": "org.apache.sling",
                 "name": "org.apache.sling.javax.activation"
-            }
-        },
-        {
-            "group": "org.apache.commons",
-            "version": "1.21",
-            "name": "commons-compress",
-            "module": {
-                "group": "org.apache.commons",
-                "name": "commons-compress"
-            }
-        },
-        {
-            "group": "org.bouncycastle",
-            "version": "1.64",
-            "name": "bcpkix-jdk15on",
-            "module": {
-                "group": "org.bouncycastle",
-                "name": "bcpkix-jdk15on"
             }
         },
         {
@@ -1265,15 +1265,6 @@
             "module": {
                 "group": "org.checkerframework",
                 "name": "checker-qual"
-            }
-        },
-        {
-            "group": "com.google.errorprone",
-            "version": "2.11.0",
-            "name": "error_prone_annotations",
-            "module": {
-                "group": "com.google.errorprone",
-                "name": "error_prone_annotations"
             }
         },
         {
@@ -1319,15 +1310,6 @@
             "module": {
                 "group": "javax.activation",
                 "name": "activation"
-            }
-        },
-        {
-            "group": "org.bouncycastle",
-            "version": "1.64",
-            "name": "bcprov-jdk15on",
-            "module": {
-                "group": "org.bouncycastle",
-                "name": "bcprov-jdk15on"
             }
         }
     ]

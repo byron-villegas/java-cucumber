@@ -18,10 +18,9 @@ Feature: Buscar Disco
     And Obtenemos las imagenes
     Then Generamos el json de salida
 
-  @ignore
   @Web
   Scenario: Buscar Disco Por Url y SKU
-    Given Una Url "https://www.discogs.com/release/10351424-Various-Devil-May-Cry-4-Original-Soundtrack" un sku "4976219025034"
+    Given Una Url "https://www.discogs.com/release/11471089-Julio-Iglesias-De-Ni%C3%B1a-A-Mujer" un sku "DJL-50317"
     And Cerramos modal aceptar cookies
     And Obtenemos el nombre del artista
     And Obtenemos el nombre del album
