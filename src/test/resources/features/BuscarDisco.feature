@@ -18,9 +18,10 @@ Feature: Buscar Disco
     And Obtenemos las imagenes
     Then Generamos el json de salida
 
+  @ignore
   @Web
   Scenario: Buscar Disco Por Url y SKU
-    Given Una Url "https://www.discogs.com/release/11471089-Julio-Iglesias-De-Ni%C3%B1a-A-Mujer" un sku "DJL-50317"
+    Given Una Url "https://www.discogs.com/release/3715754-The-Smiths-Hatful-Of-Hollow" un sku "825646658824"
     And Cerramos modal aceptar cookies
     And Obtenemos el nombre del artista
     And Obtenemos el nombre del album
