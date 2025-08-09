@@ -21,7 +21,7 @@ Feature: Buscar Disco
   @ignore
   @Web
   Scenario: Buscar Disco Por Url y SKU
-    Given Una Url "https://www.discogs.com/release/3715754-The-Smiths-Hatful-Of-Hollow" un sku "825646658824"
+    Given Una Url "https://www.discogs.com/release/28936126-Joe-Hisaishi-Royal-Philharmonic-Orchestra-A-Symphonic-Celebration-Music-From-The-Studio-Ghibli-Films" un sku "602448812292"
     And Cerramos modal aceptar cookies
     And Obtenemos el nombre del artista
     And Obtenemos el nombre del album
