@@ -148,6 +148,7 @@ public class ReportUtil {
             firstTagName = scenario
                     .getSourceTagNames()
                     .stream()
+                    .filter(tag -> !tag.equalsIgnoreCase("@ignore"))
                     .findFirst()
                     .get();
         }
@@ -158,6 +159,9 @@ public class ReportUtil {
                 break;
             case "@Microservice":
                 testType = "Microservicio";
+                break;
+            default:
+                testType = firstTagName;
                 break;
         }
     }
